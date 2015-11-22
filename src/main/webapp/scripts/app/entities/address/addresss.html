@@ -1,0 +1,56 @@
+<div>
+    <h2 translate="drivaidApp.address.home.title">Addresss</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="address.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="drivaidApp.address.home.createLabel">Create a new Address</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="drivaidApp.address.number">Number</th>
+                    <th translate="drivaidApp.address.longitude">Longitude</th>
+                    <th translate="drivaidApp.address.latitude">Latitude</th>
+                    <th translate="drivaidApp.address.name">Name</th>
+                    <th translate="drivaidApp.address.description">Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="address in addresss track by address.id">
+                    <td><a ui-sref="address.detail({id:address.id})">{{address.id}}</a></td>
+                    <td>{{address.number}}</td>
+                    <td>{{address.longitude}}</td>
+                    <td>{{address.latitude}}</td>
+                    <td>{{address.name}}</td>
+                    <td>{{address.description}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="address.detail({id:address.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="address.edit({id:address.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="address.delete({id:address.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "number",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "latitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151122011123",
+    "dto": "no",
+    "pagination": "no"
+}

@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "baseName": "drivaid",
+    "packageName": "com.drivaid",
+    "packageFolder": "com/drivaid",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "eab16b77bc4f002bb4ec4d8769017302ad101470",
+    "testFrameworks": []
+  }
+}
