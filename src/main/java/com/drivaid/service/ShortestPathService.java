@@ -27,12 +27,16 @@ public class ShortestPathService {
 	public Iterable<DirectedEdge> computeShortestPath(long fromId, long toId) {
 		Address from = addressRepository.findOne(fromId);
 		Address to = addressRepository.findOne(toId);
+
 		Iterable<DirectedEdge> result = null;
 		int nodeCount = (int) addressRepository.count();
 		List<DirectedEdge> edges = directedEdgeRepository.findAll();
+
 		Graph G = new Graph(nodeCount, edges.size(), edges);
 		DijkstraSP dsp = new DijkstraSP(G, from);
+
 		result = dsp.pathTo(to);
+
 		return result;
 	}
 }

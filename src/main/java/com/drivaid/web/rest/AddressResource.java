@@ -3,6 +3,7 @@ package com.drivaid.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import com.drivaid.domain.Address;
 import com.drivaid.repository.AddressRepository;
+import com.drivaid.service.DirectedEdgeService;
 import com.drivaid.web.rest.util.HeaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,9 @@ public class AddressResource {
 
     @Inject
     private AddressRepository addressRepository;
+    
+    @Inject
+    DirectedEdgeService directedEdgeService;
 
     /**
      * POST  /addresss -> Create a new address.
@@ -43,12 +47,13 @@ public class AddressResource {
             return ResponseEntity.badRequest().header("Failure", "A new address cannot already have an ID").body(null);
         }
         Address result = addressRepository.save(address);
+        directedEdgeService.generateEdges(result);
         return ResponseEntity.created(new URI("/api/addresss/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("address", result.getId().toString()))
             .body(result);
     }
 
-    /**
+	/**
      * PUT  /addresss -> Updates an existing address.
      */
     @RequestMapping(value = "/addresss",

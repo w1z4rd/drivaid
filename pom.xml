@@ -521,10 +521,10 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost/drivaid</url>
-                    <defaultSchemaName></defaultSchemaName>
+                    <url>jdbc:postgresql://localhost:5432/drivaid</url>
+                    <defaultSchemaName>public</defaultSchemaName>
                     <username>drivaid</username>
-                    <password></password>
+                    <password>drivaid</password>
                     <referenceUrl>hibernate:spring:com.drivaid.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>

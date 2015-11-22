@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="costa (generated)" id="1448175272462-1">
+        <dropForeignKeyConstraint baseTableName="jhi_user_authority" constraintName="fk_authority_name"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-2">
+        <dropForeignKeyConstraint baseTableName="jhi_persistent_audit_evt_data" constraintName="fk_evt_pers_audit_evt_data"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-3">
+        <dropForeignKeyConstraint baseTableName="jhi_user_authority" constraintName="fk_user_id"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-4">
+        <dropForeignKeyConstraint baseTableName="jhi_persistent_token" constraintName="fk_user_persistent_token"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-5">
+        <dropSequence sequenceName="address_id_seq"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-6">
+        <dropSequence sequenceName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-7">
+        <dropSequence sequenceName="jhi_persistent_audit_event_event_id_seq"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-8">
+        <dropSequence sequenceName="jhi_user_id_seq"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-9">
+        <dropUniqueConstraint constraintName="jhi_user_email_key" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-10">
+        <dropUniqueConstraint constraintName="jhi_user_login_key" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-11">
+        <dropTable tableName="address"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-12">
+        <dropTable tableName="jhi_authority"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-13">
+        <dropTable tableName="jhi_persistent_audit_event"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-14">
+        <dropTable tableName="jhi_persistent_audit_evt_data"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-15">
+        <dropTable tableName="jhi_persistent_token"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-16">
+        <dropTable tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="costa (generated)" id="1448175272462-17">
+        <dropTable tableName="jhi_user_authority"/>
+    </changeSet>
+</databaseChangeLog>
