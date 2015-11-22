@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.drivaid.domain.DirectedEdge;
+
 public class Graph {
 	private int V;
 	private int E;

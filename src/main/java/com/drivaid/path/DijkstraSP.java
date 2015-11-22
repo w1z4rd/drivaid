@@ -3,6 +3,7 @@ package com.drivaid.path;
 import java.util.Stack;
 
 import com.drivaid.domain.Address;
+import com.drivaid.domain.DirectedEdge;
 
 public class DijkstraSP {
 	private long[] distTo; // distTo[v] = distance of shortest s->v path
