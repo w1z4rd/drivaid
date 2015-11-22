@@ -1,6 +1,7 @@
 package com.drivaid.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
@@ -30,7 +31,8 @@ public class ShortestPathService {
 
 		Iterable<DirectedEdge> result = null;
 		int nodeCount = (int) addressRepository.count();
-		List<DirectedEdge> edges = directedEdgeRepository.findAll();
+		List<DirectedEdge> edges = directedEdgeRepository.findAll().stream().filter(x -> x.weight() <= 270)
+				.collect(Collectors.toList());
 
 		Graph G = new Graph(nodeCount, edges.size(), edges);
 		DijkstraSP dsp = new DijkstraSP(G, from);
