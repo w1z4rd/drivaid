@@ -2,7 +2,7 @@
 .angular-google-map-container { height: 400px; }
 </style>
 <form name="editForm" role="form" novalidate ng-submit="save()">
-	<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+	<ui-gmap-google-map center='map.center' zoom='map.zoom' ng-dblClick="doubleClick()"></ui-gmap-google-map>
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>

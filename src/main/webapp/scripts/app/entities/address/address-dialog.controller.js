@@ -33,4 +33,9 @@ angular.module('drivaidApp').controller('AddressDialogController',
         $scope.clear = function() {
             $modalInstance.dismiss('cancel');
         };
+        
+        $scope.doubleClick = function () {
+        	$scope.address.latitude = $scope.map.center.latitude;
+        	$scope.address.longitude = $scope.map.center.longitude;
+        };
 }]);
